@@ -77,6 +77,26 @@ plt.show()
 '''
 
 ################################
+#雷达图
+################################
+
+'''
+import numpy as np
+import matplotlib.pyplot as plt
+np.random.seed(202201)
+ax = plt.subplot(projection='polar')
+
+theta = np.linspace(0, 2 * np.pi, 20)
+r = 10 * np.random.rand(20)
+width = np.pi / 4 * np.random.rand(20)
+colors = plt.get_cmap('hsv')(r/10)
+
+ax.bar(theta, r, width=width, color=colors, alpha=0.5)
+
+plt.show()
+'''
+
+################################
 #pie饼图
 ################################
 
@@ -97,6 +117,28 @@ ax.pie(x,
        wedgeprops={'lw':2,'ec':'lightblue'})  #描边
 #plt.axis('off')  #不显示坐标轴
 
+plt.show()
+'''
+
+################################
+#环状及嵌套饼图
+################################
+'''
+import matplotlib.pyplot as plt
+import numpy as np
+np.random.seed(202201)
+fig, ax = plt.subplots()
+
+val1 = np.abs(np.random.randn(3))
+val2 = np.abs(np.random.randn(5))
+cmap = plt.colormaps["tab20c"]
+outer_colors = cmap(np.arange(3)*4)
+inner_colors = cmap([9,1,3,5,2])
+
+ax.pie(val1, radius=1, colors=outer_colors,wedgeprops=dict(width=0.3, edgecolor='w'))
+ax.pie(val2, radius=0.7, colors=inner_colors,wedgeprops=dict(width=0.3, edgecolor='w'))
+
+ax.set_aspect(1)
 plt.show()
 '''
 
