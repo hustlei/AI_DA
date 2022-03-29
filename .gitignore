@@ -4,6 +4,8 @@ _*
 
 .idea
 .obsidian
+.ipynb_checkpoints
+
 *.bak
 tst.*
 *.jpg
