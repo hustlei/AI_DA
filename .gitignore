@@ -1,9 +1,13 @@
 *.mm
-*.md
 ref/*
 _*
 
 .idea
+.obsidian
+*.bak
+tst.*
+*.jpg
+*.png
 
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)

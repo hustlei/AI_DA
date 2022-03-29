@@ -1,2 +1,3 @@
-# AI_Learning_MindMap
-人工智能相关知识思维导图
+# Data_AI_pkm
+
+数据分析、科学计算以及人工智能知识、思维导图等
